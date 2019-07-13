@@ -153,7 +153,6 @@ Este endpoint retorna um JSON informando o link da documentação no GitHub
 | ---- | ----------- | ------ |
 | 200 | Link para documentação | [SchemaResponse](#schemaresponse) |
 | 500 | Um erro inesperado | [DefaultErrorResponse](#defaulterrorresponse) |
-=======
 
 
 ### Models
