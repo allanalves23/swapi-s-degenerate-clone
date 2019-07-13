@@ -1,5 +1,4 @@
 # Star wars API
-API de teste para processo seletivo na emrpesa b2w digital / ame digital
 
 ## Version: 0.0.2
 
@@ -154,6 +153,8 @@ Este endpoint retorna um JSON informando o link da documentação no GitHub
 | ---- | ----------- | ------ |
 | 200 | Link para documentação | [SchemaResponse](#schemaresponse) |
 | 500 | Um erro inesperado | [DefaultErrorResponse](#defaulterrorresponse) |
+=======
+
 
 ### Models
 
@@ -247,3 +248,4 @@ Uma mensagem de erro que informará que tal recurso não foi encontrado
 | Nome | Tipo | Descrição |
 | ---- | ---- | ----------- |
 | documentation | string | Link para acesso a documentação |
+
