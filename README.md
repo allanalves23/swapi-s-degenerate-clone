@@ -33,7 +33,7 @@ Este endpoint retorna a listagem dos planetas. Filtrando por nome e também com 
 | Code | Description | Schema |
 | ---- | ----------- | ------ |
 | 200 | Um Array de planetas | [ [PersistPlanetResponse](#persistplanetresponse) ] |
-| default | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
+| 500 | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
 
 #### POST
 ##### Summary:
@@ -58,7 +58,7 @@ Ressaltando que a quantidade de aparições nos filmes do star wars é feita aut
 | ---- | ----------- | ------ |
 | 201 | Um objeto contendo informações sobre o planeta persistido e informações sobre o recurso | [PersistPlanetResponse](#persistplanetresponse) |
 | 400 | Um erro informando qual foi a operação inválida | [BadRequestResponse](#badrequestresponse) |
-| default | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
+| 500 | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
 
 ### /planets/:id
 
@@ -83,7 +83,7 @@ Este endpoint retorna o planeta pelo ID.
 | ---- | ----------- | ------ |
 | 200 | Um planeta | [Planet](#planet) |
 | 404 | Uma mensagem de planeta não encontrado | [NotFoundResponse](#notfoundresponse) |
-| default | Um erro inesperado | [DefaultErrorResponse](#defaulterrorresponse) |
+| 500 | Um erro inesperado | [DefaultErrorResponse](#defaulterrorresponse) |
 
 #### PUT
 ##### Summary:
@@ -108,7 +108,7 @@ Este endpoint atualiza as informações de um determinado planeta.
 | 200 | Um objeto contendo informações sobre o planeta atualizado e informações sobre o recurso | [PersistPlanetResponse](#persistplanetresponse) |
 | 400 | Um erro informando qual foi a operação inválida | [BadRequestResponse](#badrequestresponse) |
 | 404 | Um erro informando que o planeta não foi encontrado | [NotFoundResponse](#notfoundresponse) |
-| default | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
+| 500 | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
 
 #### DELETE
 ##### Summary:
@@ -132,7 +132,7 @@ Este endpoint remove um planeta.
 | ---- | ----------- | ------ |
 | 200 | Um objeto contendo informações sobre o status da operação e informações sobre o recurso | [RemovePlanetResponse](#removeplanetresponse) |
 | 404 | Um erro informando que o planeta não foi encontrado | [NotFoundResponse](#notfoundresponse) |
-| default | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
+| 500 | Um erro | [DefaultErrorResponse](#defaulterrorresponse) |
 
 ### Models
 
