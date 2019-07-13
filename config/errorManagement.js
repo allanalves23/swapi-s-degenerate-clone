@@ -16,7 +16,8 @@ module.exports = app => {
                 case 'Nome não informado':
                 case 'Clima não informado':
                 case 'Terreno não informado':
-                case 'Já existe um planeta com este nome': {
+                case 'Já existe um planeta com este nome':
+                case 'Não foi possível compreender este ID, tem certeza que está informando o ID correto?': {
                     _CUSTOMERROR = {
                         code: 400,
                         msg: error,

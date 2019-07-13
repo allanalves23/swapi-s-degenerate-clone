@@ -7,12 +7,12 @@ module.exports = app => {
     const {managePlanetErrors} = app.config.errorManagement
     const variables = app.config.variables
     
-    const get = async (req, res) => {
+    const get = async (req, res) => { 
         
         
         try {
             var limit = parseInt(req.query.limit) || 10
-            const page = req.query.page || 1
+            const page = parseInt(req.query.page) || 1
             const name = req.query.search || ''
 
             if(limit > 100) limit = 10
@@ -81,6 +81,9 @@ module.exports = app => {
 
                 throw 'Planeta não encontrado'
 
+            }).catch(error => {
+                if(error.name === 'CastError') throw 'Não foi possível compreender este ID, tem certeza que está informando o ID correto?'
+                else throw error
             })
 
         } catch (error) {
@@ -118,11 +121,11 @@ module.exports = app => {
 
     const save = async (req, res) => {
         
-        let planet = {...req.body}
-        const _id = req.params.id
-
-        
         try {
+
+            let planet = {...req.body}
+            const _id = req.params.id
+
             exists(planet.name, 'Nome não informado')
             exists(planet.climate, 'Clima não informado')
             exists(planet.terrain, 'Terreno não informado')
@@ -131,7 +134,7 @@ module.exports = app => {
 
             var op = {status: false}
 
-            if(planet._id){
+            if(_id){
                 op = await updatePlanet(planet, _id)
             }else{
                 op = await createPlanet(planet)
