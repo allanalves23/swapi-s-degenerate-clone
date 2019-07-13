@@ -1,5 +1,4 @@
 # Star wars API
-API de teste para processo seletivo na emrpesa b2w digital / ame digital
 
 ## Version: 0.0.1
 
