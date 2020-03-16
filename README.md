@@ -8,6 +8,8 @@ awallan259@gmail.com
 
 **License:** [MIT](http://opensource.org/licenses/MIT)
 
+![Node.js CI](https://github.com/allanalves23/swapi-s-degenerate-clone/workflows/Node.js%20CI/badge.svg)
+
 ### /planets
 
 #### GET
